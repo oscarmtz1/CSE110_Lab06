@@ -12,7 +12,7 @@ import edu.ucsd.cse110.lab6.misc.Constants;
 @SuppressWarnings("unused")
 public class Exercises {
     public static double mean(List<Integer> numbers) {
-        int sum = 0;
+        double sum = 0;
         for (int number : numbers) {
             sum += number;
         }
@@ -22,7 +22,7 @@ public class Exercises {
     public static double standardDeviation(List<Integer> numbers) {
         double mean = mean(numbers);
 
-        int deviationSum = 0;
+        float deviationSum = 0;
         for (int number : numbers) {
             deviationSum += Math.pow(mean - number, 2);
         }
