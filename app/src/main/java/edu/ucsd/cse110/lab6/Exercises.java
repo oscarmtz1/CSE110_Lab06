@@ -42,6 +42,18 @@ public class Exercises {
         Stream<String> wordStream = re.splitAsStream(input);
         Set<String> excludedWords = Constants.excludedWords;
 
-        return 0;
+        return wordStream.map(
+                String::toLowerCase
+        ).filter(
+                word-> !excludedWords.contains(word) && word.length() == 6
+        ).count();
+
+        //Stream<String> ws2 = wordStream;
+
+        //wordStream.filter(word ->)
+//
+//        long count = wordStream.count();
+//        //int count = 0;
+//        return count;
     }
 }
